@@ -11,9 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages = {"cc.ccoder.sell.order.client"})
-@ComponentScan(basePackages ="cc.ccoder.sell")
-
+@EnableFeignClients
 public class OrderApplication {
 
     public static void main(String[] args) {

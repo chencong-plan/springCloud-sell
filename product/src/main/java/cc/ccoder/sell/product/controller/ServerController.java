@@ -15,6 +15,6 @@ public class ServerController {
 
     @GetMapping("/msg")
     public String msg() {
-        return "this is product' msg" + System.currentTimeMillis();
+        return "this is product' msg 2";
     }
 }
