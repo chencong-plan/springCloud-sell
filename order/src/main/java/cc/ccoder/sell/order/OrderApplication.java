@@ -3,12 +3,17 @@ package cc.ccoder.sell.order;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author www.ccoder.cc
  */
 @SpringBootApplication
 @EnableDiscoveryClient
+@EnableFeignClients(basePackages = {"cc.ccoder.sell.order.client"})
+@ComponentScan(basePackages ="cc.ccoder.sell")
+
 public class OrderApplication {
 
     public static void main(String[] args) {

@@ -11,3 +11,5 @@
 ### 利用loadBalancerClient通过应用名获取url,再调用RestTemplate
 
 ### 利用@LoadBalanced, 可在restTemplate里使用应用名字
+
+### 使用Feign调用远程服务
