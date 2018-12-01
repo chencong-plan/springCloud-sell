@@ -53,6 +53,7 @@ public class ProductController {
         //3. 从数据库查询类目
         List<ProductCategory> categoryList = categoryService.findByCategoryTypeIn(categoryTypeList);
 
+        
         //4. 构造数据
         List<ProductVO> productVOList = new ArrayList<>();
         for (ProductCategory productCategory : categoryList) {
