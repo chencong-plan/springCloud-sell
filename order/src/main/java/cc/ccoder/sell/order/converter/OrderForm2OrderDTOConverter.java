@@ -35,7 +35,7 @@ public class OrderForm2OrderDTOConverter {
                     new TypeToken<List<OrderDetail>>() {
                     }.getType());
         } catch (Exception e) {
-            log.error("【json转换】错误, string={}", orderForm.getItems());
+            log.error("[json转换]错误, string={}", orderForm.getItems());
             throw new OrderException(ResultEnum.PARAM_ERROR);
         }
         orderDTO.setOrderDetailList(orderDetailList);

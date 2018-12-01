@@ -55,17 +55,17 @@ public class OrderController {
      * 5. 订单入库
      */
     @PostMapping("/create")
-    public ResultVO<Map<String, String>> create(@Valid OrderForm orderForm,
-                                                BindingResult bindingResult) {
+    public ResultVO create(@Valid OrderForm orderForm,
+                           BindingResult bindingResult) {
         if (bindingResult.hasErrors()){
-            log.error("【创建订单】参数不正确, orderForm={}", orderForm);
+            log.error("[创建订单]参数不正确, orderForm={}", orderForm);
             throw new OrderException(ResultEnum.PARAM_ERROR.getCode(),
                     bindingResult.getFieldError().getDefaultMessage());
         }
         // orderForm -> orderDTO
         OrderDTO orderDTO = OrderForm2OrderDTOConverter.convert(orderForm);
         if (CollectionUtils.isEmpty(orderDTO.getOrderDetailList())) {
-            log.error("【创建订单】购物车信息为空");
+            log.error("[创建订单]购物车信息为空");
             throw new OrderException(ResultEnum.CART_EMPTY);
         }
 
