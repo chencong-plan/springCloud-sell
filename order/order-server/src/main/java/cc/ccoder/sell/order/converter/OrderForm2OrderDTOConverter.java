@@ -6,8 +6,8 @@ import cc.ccoder.sell.order.enums.ResultEnum;
 import cc.ccoder.sell.order.exception.OrderException;
 import cc.ccoder.sell.order.form.OrderForm;
 import cc.ccoder.sell.order.pojo.OrderDetail;
-import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;

@@ -1,6 +1,7 @@
 package cc.ccoder.sell.product.repository;
 
 import cc.ccoder.sell.product.pojo.ProductCategory;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
