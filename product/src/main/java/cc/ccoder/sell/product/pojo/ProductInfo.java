@@ -23,6 +23,11 @@ public class ProductInfo {
     /**
      * 商品名称
      */
+    private String productName;
+
+    /**
+     * 商品价格
+     */
     private BigDecimal productPrice;
 
     /**
