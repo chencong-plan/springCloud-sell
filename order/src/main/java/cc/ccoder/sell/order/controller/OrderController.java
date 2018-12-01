@@ -1,5 +1,6 @@
 package cc.ccoder.sell.order.controller;
 
+import cc.ccoder.sell.order.client.ProductClient;
 import cc.ccoder.sell.order.converter.OrderForm2OrderDTOConverter;
 import cc.ccoder.sell.order.dto.OrderDTO;
 import cc.ccoder.sell.order.enums.ResultEnum;
@@ -32,12 +33,19 @@ import java.util.Map;
 public class OrderController {
 
 
+    /**
+     * order服务
+     */
     private final OrderService orderService;
 
+    private final ProductClient productClient;
+
     @Autowired
-    public OrderController(OrderService orderService) {
+    public OrderController(OrderService orderService, ProductClient productClient) {
         this.orderService = orderService;
+        this.productClient = productClient;
     }
+
 
     /**
      * 1. 参数检验

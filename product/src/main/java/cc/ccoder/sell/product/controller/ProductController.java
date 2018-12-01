@@ -10,8 +10,7 @@ import cc.ccoder.sell.product.vo.ProductVO;
 import cc.ccoder.sell.product.vo.ResultVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,5 +71,16 @@ public class ProductController {
         }
 
         return ResultVOUtil.success(productVOList);
+    }
+
+    /**
+     * 获取商品列表(给订单服务调用)
+     *
+     * @param productIdList 商品主键集合
+     * @return 返回列表集合
+     */
+    @PostMapping("/listForOrder")
+    public List<ProductInfo> listForOrder(@RequestBody List<String> productIdList) {
+        return productService.findList(productIdList);
     }
 }
