@@ -1,5 +1,6 @@
 package cc.ccoder.sell.order.client;
 
+import cc.ccoder.sell.order.dto.CardDTO;
 import cc.ccoder.sell.order.pojo.ProductInfo;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,4 +35,10 @@ public interface ProductClient {
     @PostMapping("/product/listForOrder")
     List<ProductInfo> listForOrder(@RequestBody List<String> productIdList);
 
+    /**
+     * 减库存操作
+     * @param cardDTOList
+     */
+    @PostMapping("product/decreaseStock")
+    void decreaseStock(@RequestBody List<CardDTO> cardDTOList);
 }
