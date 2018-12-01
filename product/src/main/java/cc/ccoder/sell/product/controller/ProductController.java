@@ -1,5 +1,6 @@
 package cc.ccoder.sell.product.controller;
 
+import cc.ccoder.sell.product.dto.CardDTO;
 import cc.ccoder.sell.product.pojo.ProductCategory;
 import cc.ccoder.sell.product.pojo.ProductInfo;
 import cc.ccoder.sell.product.service.CategoryService;
@@ -20,6 +21,7 @@ import java.util.stream.Collectors;
  * @author www.ccoder.cc
  */
 @RestController
+@RequestMapping("/product")
 public class ProductController {
 
     private final ProductService productService;
@@ -82,5 +84,15 @@ public class ProductController {
     @PostMapping("/listForOrder")
     public List<ProductInfo> listForOrder(@RequestBody List<String> productIdList) {
         return productService.findList(productIdList);
+    }
+
+
+    /**
+     * 扣库存操作
+     * @param cardDTOList
+     */
+    @PostMapping("/decreaseStock")
+    public void decreaseStock(@RequestBody List<CardDTO> cardDTOList) {
+        productService.decreaseStock(cardDTOList);
     }
 }
