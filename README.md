@@ -1,6 +1,5 @@
 # springCloud-sell
 
-[项目主目录]:https://github.com/chencong-plan/springCloud-sell/blob/master
 
 | 服务名称 |服务描述  | 备注 | 时间  |
 | --- | --- | --- | --- |
@@ -23,4 +22,4 @@
 
 应用通过Binder和springCloud-stream进行消息通信，spring-Cloud-Stream对消息队列进一步封装。现支持RabbitMQ和Kafka
 
-[image]([项目主目录]/doc/img/spring-cloud-stream.png)
+[image](https://github.com/chencong-plan/springCloud-sell/blob/master/doc/img/spring-cloud-stream.png)
