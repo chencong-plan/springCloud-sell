@@ -12,7 +12,14 @@
 
 
 ## MQ应用场景
+
 + 异步处理
 + 流量消峰
 + 日志处理
 + 应用解耦
+
+## Spring-cloud-stream
+
+应用通过Binder和springCloud-stream进行消息通信，spring-Cloud-Stream对消息队列进一步封装。现支持RabbitMQ和Kafka
+
+[image](/doc/img/spring-cloud-stream.png)
