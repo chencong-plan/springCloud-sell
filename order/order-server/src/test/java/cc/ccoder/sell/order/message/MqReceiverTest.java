@@ -25,4 +25,9 @@ public class MqReceiverTest extends OrderApplicationTest {
     public void send() {
         amqpTemplate.convertAndSend("myQueue", "发送消息测试");
     }
+
+    @Test
+    public void sendMessage() {
+        amqpTemplate.convertAndSend("computerOrder","computer", "发送消息测试");
+    }
 }

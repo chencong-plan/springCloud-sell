@@ -27,4 +27,32 @@ public class MqReceiver {
         log.info("接受到rabbitMQ消息:{}", message);
     }
 
+
+    /**
+     * 数码供应商服务 接受消息
+     * @param message 接受消息
+     */
+    @RabbitListener(bindings = @QueueBinding(
+            value = @Queue("myOrder"),
+            key = "computer",
+            exchange = @Exchange("computerOrder")
+    ))
+    public void processComputer(String message) {
+        log.info("Computer,接受到rabbitMQ消息:{}", message);
+    }
+
+
+    /**
+     * 水果供应商服务 接受消息
+     * @param message 接受消息
+     */
+    @RabbitListener(bindings = @QueueBinding(
+            value = @Queue("myOrder"),
+            key = "fruit",
+            exchange = @Exchange("fruitOrder")
+    ))
+    public void processFruit(String message) {
+        log.info("fruit,接受到rabbitMQ消息:{}", message);
+    }
+
 }
