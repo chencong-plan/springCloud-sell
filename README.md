@@ -22,4 +22,4 @@
 
 应用通过Binder和springCloud-stream进行消息通信，spring-Cloud-Stream对消息队列进一步封装。现支持RabbitMQ和Kafka
 
-[image](https://github.com/chencong-plan/springCloud-sell/blob/master/doc/img/spring-cloud-stream.png)
+![Spring-Cloud-Stream](https://github.com/chencong-plan/springCloud-sell/blob/master/doc/img/spring-cloud-stream.png)
