@@ -10,9 +10,9 @@ spring:
           password: 1042738887cc
           # 这个basedir是保存git配置文件的本地仓库地址 /表示当前项目所在盘符  不加 表示当前项目为根目录
           # 这里.gitignore文件过滤掉basedir文件目录
-          basedir:  basedir
+#          basedir:  basedir
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka/
 
